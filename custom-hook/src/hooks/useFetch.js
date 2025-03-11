@@ -20,11 +20,12 @@ export function useFetch(fetchFn, initialValue ) {
     }
 
     fetchData();
-  }, [fetchFn]);
+  }, [fetchFn, setFetchingData]);
 
   return {
     isFetching,
     fetchedData,
     error
+    ,setFetchingData
   };
 }
